@@ -193,19 +193,19 @@ or run it using **Live Server** in VS Code.
 
 ### 🎥 Movie Details Page
 
-![Movie Details](screenshots/movie-details.png)
+![Movie Details](screenshots/movie-details (1).png)
 
 ---
 
 ### 📼 Series Details Page
 
-![Series Details](screenshots/series-details.png)
+![Series Details](screenshots/series-details (2).png)
 
 ---
 
 ### 👤 Login Page
 
-![Login](screenshots/login.png)
+![Login](screenshots/login (1).png)
 
 ---
 
