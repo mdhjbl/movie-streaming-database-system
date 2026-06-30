@@ -1,0 +1,681 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111827;
+    color:#fff;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+.navbar{
+
+    width:100%;
+
+    height:75px;
+
+    background:#0f172a;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 60px;
+
+    position:fixed;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.4);
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#ef4444;
+
+}
+
+#navLinks{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+#navLinks li a{
+
+    transition:.3s;
+
+    font-size:17px;
+
+}
+
+#navLinks li a:hover{
+
+    color:#ef4444;
+
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.nav-right input{
+
+    width:250px;
+
+    padding:10px 15px;
+
+    border-radius:30px;
+
+    border:none;
+
+    outline:none;
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+#authButtons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+#authButtons a{
+
+    background:#ef4444;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+#authButtons a:hover{
+
+    background:#dc2626;
+
+}
+
+.hero{
+
+    width:100%;
+
+    height:100vh;
+
+    background-image:
+
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.overlay{
+
+    max-width:800px;
+
+}
+
+.overlay h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.overlay p{
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+    color:#ddd;
+
+}
+
+.overlay button{
+
+    padding:16px 45px;
+
+    background:#ef4444;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.overlay button:hover{
+
+    background:#dc2626;
+
+    transform:scale(1.05);
+
+}
+
+.section{
+
+    padding:70px;
+
+}
+
+.section h2{
+
+    font-size:35px;
+
+    margin-bottom:35px;
+
+}
+
+.card-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.movie-card{
+
+    background:#1f2937;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.movie-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.movie-card img{
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.movie-info{
+
+    padding:18px;
+
+}
+
+.movie-info h3{
+
+    margin-bottom:12px;
+
+}
+
+.movie-info p{
+
+    color:#cbd5e1;
+
+    margin-bottom:8px;
+
+}
+
+.movie-info span{
+
+    color:#facc15;
+
+    font-weight:bold;
+
+}
+
+footer{
+
+    margin-top:70px;
+
+    background:#0f172a;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+@media(max-width:900px){
+
+.navbar{
+
+padding:20px;
+
+flex-direction:column;
+
+height:auto;
+
+gap:15px;
+
+}
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+.overlay p{
+
+font-size:18px;
+
+}
+
+.section{
+
+padding:30px;
+
+}
+
+#navLinks{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.nav-right{
+
+flex-direction:column;
+
+}
+
+.nav-right input{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.overlay h1{
+
+font-size:35px;
+
+}
+
+.overlay p{
+
+font-size:16px;
+
+}
+
+.card-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+.movie-info button{
+
+    width:100%;
+
+    padding:10px;
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.movie-info button:hover{
+
+    background:#dc2626;
+
+}
+
+.movie-page{
+
+    display:flex;
+
+    gap:50px;
+
+    padding:120px 80px 40px;
+
+}
+
+.movie-left{
+
+    width:350px;
+
+}
+
+.movie-left img{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+.movie-right{
+
+    flex:1;
+
+}
+
+.movie-right h1{
+
+    margin-bottom:20px;
+
+}
+
+.movie-right p{
+
+    margin-bottom:12px;
+
+}
+
+.movie-right button{
+
+    padding:12px 25px;
+
+    margin-right:15px;
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+}
+
+#commentText{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+.comment{
+    background:#1f2937;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.season-card {
+    background: #1f2937;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.season-header {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.season-header:hover {
+    background: #2d3748;
+}
+
+.season-arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.episodes-container {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border-top: 1px solid #2d3748;
+}
+
+.episodes-container.hidden {
+    max-height: 0;
+}
+
+.episode-card {
+    display: flex;
+    gap: 20px;
+    padding: 18px 24px;
+    border-bottom: 1px solid #2d3748;
+    transition: background 0.3s ease;
+}
+
+.episode-card:last-child {
+    border-bottom: none;
+}
+
+.episode-card:hover {
+    background: #2d3748;
+}
+
+.episode-number {
+    min-width: 40px;
+    height: 40px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.episode-info {
+    flex: 1;
+}
+
+.episode-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.episode-meta {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.episode-plot {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.season-card {
+    background: #1f2937;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.season-header {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.season-header:hover {
+    background: #2d3748;
+}
+
+.season-arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.episodes-container {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    border-top: 1px solid #2d3748;
+}
+
+.episodes-container.hidden {
+    max-height: 0;
+}
+
+.episode-card {
+    display: flex;
+    gap: 20px;
+    padding: 18px 24px;
+    border-bottom: 1px solid #2d3748;
+    transition: background 0.3s ease;
+}
+
+.episode-card:last-child {
+    border-bottom: none;
+}
+
+.episode-card:hover {
+    background: #2d3748;
+}
+
+.episode-number {
+    min-width: 48px;
+    height: 48px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.episode-info {
+    flex: 1;
+}
+
+.episode-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.episode-meta {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.episode-plot {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.no-episodes {
+    color: #64748b;
+    padding: 30px 24px;
+    text-align: center;
+}

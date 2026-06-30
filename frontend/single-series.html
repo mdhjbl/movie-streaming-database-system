@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">MovieDB</div>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="series.html">Series</a></li>
+        </ul>
+        <div id="authButtons"></div>
+    </nav>
+
+    <div class="movie-page">
+        <div class="movie-left">
+            <img id="poster">
+        </div>
+        <div class="movie-right">
+            <h1 id="title"></h1>
+            <p><b>Director:</b> <span id="director"></span></p>
+            <p><b>Genre:</b> <span id="genre"></span></p>
+            <p><b>Country:</b> <span id="country"></span></p>
+            <p><b>Language:</b> <span id="language"></span></p>
+            <p><b>Release Year:</b> <span id="releaseYear"></span></p>
+            <p><b>IMDb:</b> ⭐ <span id="rating"></span></p>
+            <p id="plot"></p>
+            <br>
+            <button id="favoriteBtn">Favorite</button>
+            <button id="watchBtn">WatchList</button>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>Seasons</h2>
+        <div id="seasonContainer"></div>
+    </section>
+
+    <section class="section">
+        <h2>Comments</h2>
+        <div id="comments"></div>
+        <textarea id="commentText"></textarea>
+        <br><br>
+        <button id="commentBtn">Comment</button>
+    </section>
+
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/singleSeries.js"></script>
+</body>
+
+</html>

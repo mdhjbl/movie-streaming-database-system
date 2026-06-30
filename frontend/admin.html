@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="logo">MovieDB Admin</div>
+            <div class="nav-right">
+                <span id="adminName" class="admin-name"></span>
+                <button id="logoutBtn" class="btn btn-logout">Logout</button>
+            </div>
+        </nav>
+
+        <div class="main-wrapper">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="menu-item active" data-section="movies">
+                        <span>🎬</span>
+                        <span>Movies</span>
+                    </li>
+                    <li class="menu-item" data-section="series">
+                        <span>📺</span>
+                        <span>Series</span>
+                    </li>
+                    <li class="menu-item" data-section="users">
+                        <span>👥</span>
+                        <span>Users</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Loading Indicator -->
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <span>Loading...</span>
+                </div>
+
+                <!-- Messages -->
+                <div id="message" class="message hidden"></div>
+
+                <!-- Section Title -->
+                <div class="section-header">
+                    <h2 id="sectionTitle">Movies</h2>
+                    <button id="addBtn" class="btn btn-primary">+ Add</button>
+                    <input type="text" id="searchInput" placeholder="Search..." class="search-input">
+                </div>
+
+                <!-- Table Container -->
+                <div id="tableContainer" class="table-card"></div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Item</h3>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </div>
+            <form id="itemForm" class="item-form"></form>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
